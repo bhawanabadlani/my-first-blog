@@ -1,30 +1,13 @@
-<html>
-    <head>
-        <title>Krishna's blog</title>
-    </head>
-    <body>
-            <div>
-                <h1><a href="/">Krishna's Blog</a></h1>
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <div class="date">
+                <p>published: {{ post.published_date }}</p>
             </div>
-            <div>
-                {% for post in posts %}
-                <div,>
-                    <p>published: {{ post.published_date }}</p>
-                    <h2><a href="">{{ post.title }}</a></h2>
-                    <p>{{ post.text|linebreaksbr }}</p>
-                </div>
-                {% endfor %}
-            </div>
-            <div>
-                <p>published: 26.08.2019, 13:40</p>
-                <h2><a href="">My first post</a></h2>
-                <p>Krishna is very merciful.</p>
-            </div>
-    
-            <div>
-                <p>published: 26.08.2019, 13:41</p>
-                <h2><a href="">My second post</a></h2>
-                <p>Lord Krishna can dissipate the lamentation of an ignorant man</p>
-            </div>
-        </body>
-    </html>
+            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
