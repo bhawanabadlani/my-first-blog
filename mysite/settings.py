@@ -55,7 +55,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r'/home/jpsofficedev/Documents/coding_for_girls/djangogirls/blog/template'],
+        'DIRS': [r'/home/jpsofficedev/jpsofficedev.pythonanywhere.com/blog/template'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
