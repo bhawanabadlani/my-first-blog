@@ -25,7 +25,7 @@ SECRET_KEY = 'bd65&y*53stm7w064z8jn@6$(l+f5!hohs27=wq3fx+$1-ujad'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'jpsofficedev.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'jpsofficedev.pythonanywhere.com']
 
 
 # Application definition
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r'/home/jpsofficedev/jpsofficedev.pythonanywhere.com/blog/template'],
+        'DIRS': [r'/home/jpsofficedev/Documents/coding_for_girls/djangogirls/blog/template'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -75,9 +75,13 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+      'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'djangogirls',
+        'USER': 'jpsofficedev',
+        'PASSWORD': '',
+        'HOST': '127.0.0.1',
+        'PORT': '',
     }
 }
 
