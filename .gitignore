@@ -6,3 +6,4 @@ db.sqlite3
 /static
 .DS_StoreS
 local_settings.py
+heroku_settings.py
